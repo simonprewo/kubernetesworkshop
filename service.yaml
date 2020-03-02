@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: apache-service
+spec:
+  type: ClusterIP
+  selector:
+    app: apache
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8000
+
